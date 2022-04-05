@@ -1,2 +1,1 @@
-# kalinovsasha-JSFE2022Q1
-Private repository for @kalinovsasha
+## Перейти на страницу [Shelter_1280px](https://kalinovsasha.github.io/shelter-rsschool/shelter/pages/main/index.html)
