@@ -1,0 +1,105 @@
+@mixin title-white ($width,$height){
+    width: $width;
+    height: $height;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color:$color-light-xl; 
+  }
+  @mixin contact-text {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  }
+footer{
+    margin: 0 auto;
+    width: 1280px;
+    height: 350px;
+    /* background-image: url(../../assets/images/footer-background.png);*/
+    background: url(../../assets/images/footer-background.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%) , #211F20;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.footer_content{
+    width: 94%;
+    height: 310px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_contacts{
+    margin-top: 16px;
+    height: 234px;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .footer_contacts_text{
+        @include title-white(280px,90px )
+    }
+    .footer_contacts_mail{
+        display: flex;
+        flex-direction: row;
+        width: 251px;
+        height: 32px;
+        color: $color-primary;
+        text-decoration: none;
+        .footer_contacts_mail_text{
+            align-self: center;
+            margin-left: 20px;
+            @include contact-text;
+        }
+    }
+    .footer_telephone{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        .footer_telephone_number{
+            align-self: center;
+            margin-left: 20px;
+            @include contact-text;
+        }
+    }
+    
+}
+.footer_location{
+    margin-top: 16px;
+    height: 234px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .footer_contacts_text{
+        @include title-white(270px,90px )
+    }
+    .footer_location_adress{
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        .footer_contacts_text_adress{
+            align-self: center;
+            margin-left: 20px;
+            @include contact-text;
+            }
+    }
+}
+
+.footer_puppy{
+    margin-right: -10px;
+    background-image: url(../../assets/images/footer-puppy.png);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 26%;
+}

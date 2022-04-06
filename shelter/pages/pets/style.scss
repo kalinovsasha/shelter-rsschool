@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./header";
+@import "./pets";
+@import "./footer";
+
+a{
+    text-decoration: none;
+    &:hover{
+        color: $color-select;
+        transition: 0.3s ease-out;
+    }
+}

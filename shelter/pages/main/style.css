@@ -230,9 +230,9 @@
   letter-spacing: 0.06em;
 }
 
-.slider_card_button:hover {
+.slider_card:hover .slider_card_button {
   cursor: pointer;
-  background-color: #f3be97;
+  background-color: #FDDCC4;
   -webkit-transition: .25s ease-out;
   transition: .25s ease-out;
 }
@@ -927,7 +927,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #f3be97;
+  background-color: #FDDCC4;
 }
 
 .startScreen {
@@ -957,7 +957,7 @@ button:hover {
 }
 
 .header a:hover {
-  color: #f3be97;
+  color: #FDDCC4;
 }
 
 .header_logo {

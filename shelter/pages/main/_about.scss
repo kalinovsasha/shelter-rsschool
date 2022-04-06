@@ -164,7 +164,7 @@
     color: $color-dark-3xl;
     letter-spacing: 0.06em;
 }
-.slider_card_button:hover{
+.slider_card:hover .slider_card_button{
     cursor: pointer;
     background-color: $color-select;
     transition: .25s ease-out;
@@ -183,6 +183,6 @@
 }
 .slider_button:hover{
     cursor: pointer;
-    background-color: $color-primary;
+    background-color: $color-primary; 
     transition: 0.3s ease-out;
 }
