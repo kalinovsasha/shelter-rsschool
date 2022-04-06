@@ -917,6 +917,8 @@ h4 {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 1280px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 button {
@@ -931,11 +933,24 @@ button:hover {
 }
 
 .startScreen {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 1280px;
   height: 908px;
   background-image: url(../../assets/images/background-gradient.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
 }
 
 .header {
@@ -945,8 +960,8 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 0 auto;
   margin-top: 60px;
-  margin-left: 40px;
   width: 1200px;
   height: 60px;
 }
@@ -1040,10 +1055,8 @@ button:hover {
 .content {
   position: relative;
   width: 94%;
-  height: 100%;
+  height: 728px;
   margin-left: 40px;
-  margin-top: 60px;
-  /* border: 1px solid red; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1054,6 +1067,7 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 
 .content_contentContainer {
@@ -1070,7 +1084,6 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /*  border: 1px solid rgb(32, 30, 167); */
 }
 
 .content_contentContainer h2 {
@@ -1126,6 +1139,10 @@ button:hover {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+}
+
+.content_contentContainer a {
+  text-decoration: none;
 }
 
 .content_puppy {
