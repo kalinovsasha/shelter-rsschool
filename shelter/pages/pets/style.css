@@ -130,7 +130,6 @@ header {
 }
 
 button {
-  /* Auto layout */
   width: 187px;
   height: 52px;
   display: -webkit-box;
@@ -285,7 +284,7 @@ button {
   height: 55px;
 }
 
-.arrowG {
+.disabled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,12 +300,11 @@ button {
   border: 2px solid #CDCDCD;
 }
 
-.arrowG:hover {
+.disabled:hover {
   /* background-color:$color-select; */
-  cursor: pointer;
 }
 
-.arrowP {
+.arrowEnabled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -323,15 +321,23 @@ button {
   border: 2px solid #F1CDB3;
 }
 
-.arrowP:hover {
-  /* background-color:$color-select; */
+.arrowEnabled:hover {
+  background-color: #FDDCC4;
   cursor: pointer;
 }
 
 .pets_container_pageNavigator_pageNumber {
+  /* display: flex;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-right: 20px;
+    border-radius: 100px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -339,11 +345,13 @@ button {
   height: 52px;
   margin-right: 20px;
   border-radius: 100px;
+  border: 2px solid #CDCDCD;
+  border: 2px solid #F1CDB3;
   background-color: #F1CDB3;
 }
 
 .pets_container_pageNavigator_pageNumber:hover {
-  /* background-color:$color-select; */
+  background-color: #FDDCC4;
   cursor: pointer;
 }
 

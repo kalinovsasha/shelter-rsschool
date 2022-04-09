@@ -35,7 +35,6 @@
 }
 
 button{
-    /* Auto layout */
 width: 187px;
 height: 52px;
 display: flex;
@@ -122,31 +121,32 @@ background-color: $color-light-s;
     height: 55px;
 }
 
-.arrowG{
+.disabled{
     @include arrow;
     &:hover{
        /* background-color:$color-select; */
-        cursor: pointer
     }
 }
-.arrowP{
+.arrowEnabled{
     @include arrow;
     border: 2px solid $color-primary;
     &:hover{
-       /* background-color:$color-select; */
+        background-color:$color-select;
         cursor: pointer
     }
 }
 .pets_container_pageNavigator_pageNumber{
-    display: flex;
+   /* display: flex;
     justify-content: center;
     width: 52px;
     height: 52px;
     margin-right: 20px;
-    border-radius: 100px;
+    border-radius: 100px; */
+    @include arrow;
+    border: 2px solid $color-primary;
     background-color: $color-primary; 
     &:hover{
-       /* background-color:$color-select; */
+        background-color:$color-select;
         cursor: pointer
     }
 }
