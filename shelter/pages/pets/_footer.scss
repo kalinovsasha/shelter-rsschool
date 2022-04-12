@@ -104,7 +104,7 @@ footer{
     width: 26%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     .footer{
         height: 639px; 
     }
@@ -127,5 +127,36 @@ footer{
     }
     .footer_location{
         width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer{
+        height: 809px; 
+    }
+    .footer_content{
+        height: 809px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .footer_puppy{
+        background-size: cover;
+        margin-right: 50px;
+        width: 260px;
+        height: 269px;
+        justify-self: flex-end;
+       
+    }
+    .footer_contacts{
+        width: 278px;
+        height: 208px;
+    }
+    .footer_location{
+        width: 278px;
+        height: 208px;
     }
 }
