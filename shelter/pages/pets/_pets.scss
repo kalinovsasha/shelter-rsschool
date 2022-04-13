@@ -96,6 +96,9 @@ background-color: $color-light-s;
     margin-top: 15px;
     width: 23%;
     height: 435px;
+    &:hover{
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04)
+    }
     .pets_slider_card_text{
         font-family: 'Georgia';
         font-style: normal;
@@ -140,10 +143,7 @@ background-color: $color-light-s;
     @include arrow;
     border: 2px solid $color-primary;
     background-color: $color-primary; 
-    &:hover{
-        background-color:$color-select;
-        cursor: pointer
-    }
+   
 }
 
   @media (max-width: 1280px) {
