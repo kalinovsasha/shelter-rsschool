@@ -26,6 +26,9 @@
 }
 
 .about_container_aboutPets {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   width: 300px;
   height: 408px;
   margin-left: 175px;
@@ -36,6 +39,9 @@
 }
 
 .about_container_content {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,6 +274,62 @@
   background-color: #F1CDB3;
   -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
+}
+
+@media (max-width: 1280px) {
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 1048px;
+  }
+  .about_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 57%;
+    height: 868px;
+  }
+  .about_container_aboutPets {
+    width: 300px;
+    height: 408px;
+    margin-left: 0px;
+  }
+  .pets {
+    width: 100%;
+    height: 877px;
+  }
+  .pets_container {
+    width: 99%;
+    height: 697px;
+  }
+  .pets_container_slider {
+    height: 435px;
+    width: 92%;
+  }
+  .pets_container_slider .card1 {
+    margin-right: 30px;
+  }
+  .pets_container_slider .card3 {
+    display: none;
+  }
 }
 
 /*-------------------Help----------------------------*/
@@ -574,6 +636,42 @@
   text-align: center;
 }
 
+@media (max-width: 1280px) {
+  .help {
+    width: 100%;
+    height: 779px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .help_content {
+    height: 599px;
+    width: 82%;
+  }
+  .help_content h2 {
+    margin-top: 0px;
+  }
+  .help_list {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 40px;
+    width: 110%;
+    height: 450px;
+  }
+  .help_list_item1, .help_list_item2, .help_list_item3, .help_list_item4, .help_list_item5, .help_list_item6, .help_list_item7, .help_list_item8, .help_list_item9 {
+    margin: 0 2px;
+    width: 32%;
+  }
+}
+
 /*------------------------Donation----------------------------*/
 .donation {
   width: 100%;
@@ -710,6 +808,43 @@
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #545454;
+}
+
+@media (max-width: 1280px) {
+  .donation {
+    height: 783px;
+    width: 100%;
+  }
+  .donation_content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    height: 783px;
+    width: 100%;
+  }
+  .donation_content_item1 {
+    width: 505px;
+    height: 261px;
+    background-size: cover;
+    margin-bottom: 60px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .donation_content_item2 {
+    width: 380px;
+    height: 282px;
+    margin-top: 63px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-right: 15px;
+  }
 }
 
 footer {
@@ -887,6 +1022,86 @@ footer {
   background-repeat: no-repeat;
   overflow: hidden;
   width: 26%;
+}
+
+@media (max-width: 1280px) {
+  .footer {
+    width: 100%;
+    height: 639px;
+  }
+  .footer_content {
+    height: 639px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .footer_puppy {
+    margin-right: 50px;
+    width: 300px;
+    height: 310px;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .footer_contacts {
+    justify-self: flex-end;
+    margin-top: 30px;
+    margin-right: 28px;
+    width: 45%;
+  }
+  .footer_location {
+    margin-top: 30px;
+    margin-left: -15px;
+    width: 40%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    height: 809px;
+  }
+  .footer_content {
+    height: 809px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .footer_puppy {
+    background-size: cover;
+    margin-right: 50px;
+    width: 260px;
+    height: 269px;
+    justify-self: flex-end;
+  }
+  .footer_contacts {
+    width: 278px;
+    height: 208px;
+  }
+  .footer_location {
+    width: 278px;
+    height: 208px;
+  }
 }
 
 h4 {
@@ -1154,7 +1369,10 @@ header a:hover {
   }
   header {
     max-width: 1200px;
-    margin-top: 35px;
+    margin-top: 30px;
+  }
+  .header_logo {
+    margin-left: 5px;
   }
   .header_nav {
     width: 460px;
@@ -1177,7 +1395,7 @@ header a:hover {
   }
   .content_contentContainer {
     position: relative;
-    margin-top: 10px;
+    margin-top: 0px;
     height: 322px;
     width: 460px;
     -ms-flex-item-align: center;

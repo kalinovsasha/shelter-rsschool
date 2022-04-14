@@ -100,3 +100,32 @@
         color: $color-dark-l;
     }
 }
+
+@media (max-width:1280px){
+    .donation{
+        height: 783px;
+        width: 100%;
+        
+    }
+    .donation_content{
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        height: 783px;
+        width: 100%;
+    }
+    .donation_content_item1{
+        width: 505px;
+        height: 261px;
+        background-size: cover;
+        margin-bottom: 60px;
+        order: 2;
+    }
+    .donation_content_item2{
+        width: 380px;
+        height: 282px;
+        margin-top: 63px;
+        order: 1;
+        margin-right: 15px;
+    }
+}
