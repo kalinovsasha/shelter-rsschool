@@ -360,8 +360,54 @@
             align-items: center;
     -ms-flex-item-align: center;
         align-self: center;
-    width: 85%;
+    width: 90%;
     height: 890px;
+  }
+  .about_container_content {
+    margin-top: -40px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    height: 494px;
+  }
+  .about_container_content .about_container_content_h2 {
+    margin-top: 0px;
+    width: 270px;
+    height: 64px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+  }
+  .about_container_content .about_container_content_textarea {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: justify;
+    width: 270px;
+    color: #4C4C4C;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
   }
   .about_container_aboutPets {
     margin-top: 40px;
@@ -1743,6 +1789,7 @@ header a:hover {
 
 @media (max-width: 767px) {
   .startScreen {
+    width: 100%;
     height: 823px;
   }
   header {

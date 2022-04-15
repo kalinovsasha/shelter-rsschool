@@ -245,9 +245,51 @@
         justify-content: space-between;
         align-items: center;
         align-self: center;
-        width: 85%;
+        width: 90%;
         height: 890px;   
     }
+
+    .about_container_content{
+        
+        margin-top: -40px;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 494px;
+    
+        .about_container_content_h2{
+            
+            margin-top: 0px;
+            width: 270px;
+            height: 64px;
+            align-self: center;
+            text-align: center;
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+        }
+        .about_container_content_textarea{
+            
+            align-self: center;
+            text-align: justify;
+            width:270px;
+            color: $color-dark-xl;
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+        }
+    }
+
+
+
+
     .about_container_aboutPets{
         margin-top: 40px;
         width: 260px;
