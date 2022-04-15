@@ -129,3 +129,80 @@
         margin-right: 15px;
     }
 }
+
+@media (max-width:767px){
+    .donation{
+        height: 542px;
+        width: 100%;
+        
+    }
+    .donation_content{
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        height: 543px;
+        width: 100%;
+        .donation_content_item2{
+            align-self: center;
+            width: 300px;
+            height: 281px;
+            margin-top: 63px;
+            order: 1;
+            margin-left: 13px;
+            .divh2{
+                margin-top: -25px;
+                width: 300px;
+                height: 64px;
+                align-self: center;
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 25px;
+                line-height: 130%;
+                text-align: center;
+            }
+            .donation_content_item2_h5{
+                align-self: center;
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 160%;
+            }
+            .donation_content_text{
+                width: 280px;
+                text-align: justify;
+            }
+        }
+        .donation_content_button{
+            width: 281px;
+            height: 43px;
+            margin-top: 30px;
+            .donation_content_item2_number{
+                width: 206px;
+                height: 17px;
+                align-self: center;
+                font-family: 'Georgia';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 110%;
+            }
+            .donation_content_item2_card{
+                width: 33px;
+                height: 25px;
+                background-size: cover;
+                align-self: center;
+                margin-left: 3px;
+            }
+        }
+    }
+    .donation_content_item1{
+        width: 260px;
+        height: 135px;
+        background-size: cover;
+        margin-bottom: 33px;
+        order: 2;
+    }
+  
+}

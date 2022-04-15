@@ -234,3 +234,71 @@ header{
         justify-self: flex-end;
     }
 }
+@media (max-width: 767px) {
+    .startScreen{
+        height: 823px;
+    }
+    header{
+        max-width: 320px;
+        margin-top: 30px;
+    }
+    .header_logo{
+        margin-left: 5px;
+    }
+    .header_nav{
+        display: none;
+    }
+    .content{
+        width: 94%;
+        height: 1015px;
+        margin-left: 0px;
+        margin-top: 60px;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .content_contentContainer{
+        position: relative;
+        margin-top: 0px;
+        height: 322px;
+        width: 460px;
+        align-self: center;
+        justify-content: space-around;
+        display: flex;
+        h2{
+            margin-top: -23px;
+            align-self: center;
+            width: 200px;
+            height: 64px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 130%;
+            letter-spacing: 0.06em;
+            font-family: 'Georgia';
+        }
+        .content_contentContainer_text{
+            align-self: center;
+            width: 300px;
+            height: 96px;
+        }
+        .content_contentContainer_button{
+            width: 207px;
+            height: 52px;
+            margin-bottom: 6px;
+            margin-left: 126px;
+        }
+    }
+    .content_contentContainer_text{
+    }
+   
+    .content_puppy{
+        width: 260px;
+        height: 271px;
+        margin-left: 37px;
+        align-self: center;
+        justify-self: flex-end;
+    }
+
+}
