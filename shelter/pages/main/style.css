@@ -1429,6 +1429,10 @@ footer {
             align-items: center;
   }
   .footer_contacts .footer_contacts_text {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 2px;
+    padding-left: 5px;
     width: 260px;
     height: 64px;
     font-family: 'Georgia';
@@ -1457,7 +1461,9 @@ footer {
     margin-top: -40px;
   }
   .footer_location .footer_contacts_text {
-    margin: 15px 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 13px 0;
     width: 240px;
     height: 64px;
     font-family: 'Georgia';
@@ -1466,6 +1472,14 @@ footer {
     font-size: 25px;
     line-height: 130%;
     text-align: center;
+  }
+  .footer_contacts_text_adress {
+    margin-top: -10px;
+  }
+  .adress2 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 12px;
   }
   .footer_location_adress {
     -ms-flex-item-align: start;
@@ -1627,8 +1641,8 @@ header a:hover {
 
 .header_burger {
   display: none;
-  border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
+  border-top: 2px solid #F1CDB3;
+  border-bottom: 2px solid #F1CDB3;
 }
 
 .linkActive {
@@ -1844,7 +1858,7 @@ header a:hover {
   .header_burger .header_burger_center {
     width: 30px;
     height: 2px;
-    background-color: #000000;
+    background-color: #F1CDB3;
   }
   .content {
     width: 94%;

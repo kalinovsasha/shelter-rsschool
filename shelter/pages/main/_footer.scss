@@ -167,6 +167,9 @@ footer{
         align-content: center;
         align-items: center;
         .footer_contacts_text{
+            box-sizing: border-box;
+            padding-top: 2px;
+            padding-left: 5px;
             width: 260px;
             height: 64px;
             font-family: 'Georgia';
@@ -187,7 +190,8 @@ footer{
         align-self: center;
         margin-top: -40px;
         .footer_contacts_text{
-            margin: 15px 0;
+            box-sizing: border-box;
+            margin: 13px 0;
             width: 240px;
             height: 64px;
             font-family: 'Georgia';
@@ -197,6 +201,13 @@ footer{
             line-height: 130%;
             text-align: center;
         }
+    }
+    .footer_contacts_text_adress{
+        margin-top: -10px;
+    }
+    .adress2{
+        box-sizing: border-box;
+        padding-top: 12px;
     }
     .footer_location_adress{
         align-self: flex-start;

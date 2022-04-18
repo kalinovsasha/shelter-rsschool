@@ -113,8 +113,8 @@ header{
 }
 .header_burger{
     display: none;
-    border-top: 2px solid #000000;
-    border-bottom:2px solid #000000;
+    border-top: 2px solid $color-primary;
+    border-bottom:2px solid $color-primary;
 }
 .linkActive{
     border-bottom: 3px solid $color-primary;
@@ -272,7 +272,7 @@ header{
         .header_burger_center{
             width: 30px;
             height: 2px;
-            background-color: #000000;
+            background-color: $color-primary;
         }
     }
     .content{
