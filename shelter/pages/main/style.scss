@@ -68,7 +68,7 @@ header{
     h1{
         margin: 0;
         padding: 0;
-        width: 1280px;
+        width: 280px;
         font-family: 'Georgia';
         font-style: normal;
         font-weight: 400;
@@ -87,6 +87,9 @@ header{
         margin-left: 4px;
         color: $color-light-xl;
     }
+}
+.menuBlackout{
+    display: none;
 }
 .header_nav{
     width: 443px;
@@ -204,6 +207,8 @@ header{
         margin-left: 5px;
     }
     .header_nav{
+        display: block;
+        opacity: 1 ;
         width: 460px;
         height: 27px;
     }
@@ -251,13 +256,65 @@ header{
         flex-direction: row;
         justify-content: space-between;
     }
+    
     .header_logo{
+        position: relative;
+        z-index: 4;
         margin-left: 5px;
+        .header_h1{
+            width: 200px;
+        }
     }
     .header_nav{
+        pointer-events: none;
+        opacity: 0;
+        margin: 0 0;
+        padding: 0 0;
+        position: absolute;
+        width: 320px;
+        height: 823px;
+        background-color: $color-dark-3xl;
+        top:0;
+        left: calc(100vw - 321px);
+        z-index: 3;
+        ul{
+            margin-top: 100px;
+            margin-left: 39px;
+            width: 243px;
+            height: 327px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 160%;
+            }
+        }
+    }
+    .header_nav_visible{
+        opacity:1 ;
+        pointer-events: all;
+        transition: .35s ease-out;
+        
+    }
+    .menuBlackout{
         display: none;
+        margin: 0 0;
+        padding: 0 0;
+        top:0;
+        position: absolute;
+        background-color: rgba(41, 41, 41, 0.6);
+        width: 100vw;
+        height: 4684px;
+        z-index: 2;
     }
     .header_burger{
+        position: relative;
+        z-index: 4;
         width: 30px;
         height: 19px;
         margin-right: 55px;
@@ -266,6 +323,7 @@ header{
         flex-direction:row;
         justify-content: center;
         align-items: center;
+        transition: 0.25s ease-out;
         &:hover{
             cursor: pointer;
         }
@@ -274,6 +332,10 @@ header{
             height: 2px;
             background-color: $color-primary;
         }
+    }
+    .burger_rotate{
+        transform: rotateZ(90deg);
+        transition: 0.25s ease-out;
     }
     .content{
         width: 94%;
