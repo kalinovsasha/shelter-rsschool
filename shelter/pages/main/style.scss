@@ -266,19 +266,20 @@ header{
         }
     }
     .header_nav{
+        position: fixed;
         pointer-events: none;
-        opacity: 0;
+        opacity: 1;
         margin: 0 0;
         padding: 0 0;
-        position: absolute;
+        top:0;
         width: 320px;
         height: 823px;
         background-color: $color-dark-3xl;
-        top:0;
-        left: calc(100vw - 321px);
+        left: calc(100vw + 100px);
         z-index: 3;
+        transition: .3s ease-in;
         ul{
-            margin-top: 100px;
+            margin-top: 158px;
             margin-left: 39px;
             width: 243px;
             height: 327px;
@@ -297,8 +298,9 @@ header{
     }
     .header_nav_visible{
         opacity:1 ;
+        left: calc(100vw - 321px);
         pointer-events: all;
-        transition: .35s ease-out;
+        transition: .3s ease-in;
         
     }
     .menuBlackout{
@@ -306,7 +308,7 @@ header{
         margin: 0 0;
         padding: 0 0;
         top:0;
-        position: absolute;
+        position: fixed;
         background-color: rgba(41, 41, 41, 0.6);
         width: 100vw;
         height: 4684px;
