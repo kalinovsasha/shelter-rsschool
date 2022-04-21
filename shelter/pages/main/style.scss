@@ -211,6 +211,7 @@ header{
         opacity: 1 ;
         width: 460px;
         height: 27px;
+        transition: none;
     }
     .content{
         width: 94%;
@@ -297,9 +298,9 @@ header{
         }
     }
     .header_nav_visible{
-        opacity:1 ;
-        left: calc(100vw - 321px);
-        pointer-events: all;
+        opacity:1 !important;
+        left: calc(100vw - 321px) !important;
+        pointer-events: all !important;
         transition: .3s ease-in;
         
     }
