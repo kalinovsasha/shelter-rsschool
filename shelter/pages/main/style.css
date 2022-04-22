@@ -1736,7 +1736,7 @@ footer {
 
 .wrapper {
   padding: 0 0;
-  top: 1500px;
+  top: 0px;
   left: 0;
   position: absolute;
   margin: 0 auto;
@@ -1753,7 +1753,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  position: fixed;
+  top: calc( 50% - 275px);
+  left: calc(50% - 475px);
   width: 952px;
   height: 552px;
   z-index: 5;
@@ -1897,6 +1899,12 @@ footer {
 
 .wrapper .modalWindow_close:hover {
   background-color: #FDDCC4;
+}
+
+.hideHtml {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 
 h4 {

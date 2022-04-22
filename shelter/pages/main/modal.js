@@ -129,11 +129,13 @@ let modalWindow = {
         this.Parasites.innerHTML=`<b>Parasites:</b> ${pet.parasites}`;
     },
     openModal(pet){
+      document.querySelector('html').classList.add('hideHtml');
       this.setPet(pet)
       this.modalWindowFade.style.display='flex';
       this.wrapper.style.display='flex';
    },
     closeModal(){
+      document.querySelector('html').classList.remove('hideHtml');
        this.modalWindowFade.style.display='none';
        this.wrapper.style.display='none';
     }
