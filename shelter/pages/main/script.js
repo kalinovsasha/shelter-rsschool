@@ -1,4 +1,5 @@
 
+/////////////////VAR//////////////////////////////////////////
 petsDb=`
 [
     {
@@ -163,8 +164,15 @@ let slider={
     petsActualIndex:[0,2,4],
     petsRandomIndex:[0,2,4],
 
+    init(){
+        for(let i=3; i<6;i++){
+            slider.cards[i].innerHTML=`
+            <div class="slider_card_image"><img src="${slider.petsActual[i-3].img}" alt="name"></div>
+            <div class="slider_card_text">${slider.petsActual[i-3].name}</div>
+            <div class="slider_card_button button${slider.petsRandomIndex[i-3]}">Learn more</div>`
+        };
+    },
     setCards(){
-        
         this.setRandomPets();
         this.petsActual=this.petsRandom;
         this.petsActualIndex=this.petsRandomIndex;
@@ -178,7 +186,7 @@ let slider={
             slider.cards[i].innerHTML=`
                 <div class="slider_card_image"><img src="${this.petsRandom[i-6].img}" alt="name"></div>
                 <div class="slider_card_text">${this.petsRandom[i-6].name}</div>
-                <div class="slider_card_button button${this.petsRandomIndex[i]}">Learn more</div>`
+                <div class="slider_card_button button${this.petsRandomIndex[i-6]}">Learn more</div>`
         };
     },
     setRandomPets(){
@@ -232,6 +240,7 @@ let slider={
     },
 }
 
+///////////////////////////////////Кнопки вперед-назад/////////////////////////////////////
 
 slider.buttonPrev.addEventListener('click',()=>{
     slider.movePrev()
@@ -248,7 +257,7 @@ slider.buttonPrev.addEventListener('click',()=>{
 });
 
 slider.buttonNext.addEventListener('click',()=>{
-    slider.moveNext()
+    slider.moveNext();
     slider.cards[3].addEventListener('animationend',()=>
         {
         slider.removeNext();
@@ -261,10 +270,11 @@ slider.buttonNext.addEventListener('click',()=>{
     });
     slider.setCards();
 });
-    
 
 
-
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////// 
+slider.init(); //Начальная инициализация слайдера.   
+document.querySelector(`.card4`).addEventListener('click',()=>modalWindow.openModal(slider.petsActual[0]))
+document.querySelector(`.card5`).addEventListener('click',()=>modalWindow.openModal(slider.petsActual[1]))
+document.querySelector(`.card6`).addEventListener('click',()=>modalWindow.openModal(slider.petsActual[2]))
 
