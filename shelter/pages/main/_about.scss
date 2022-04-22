@@ -14,7 +14,7 @@
     margin: 80px 40px;
 }
 .about_container_aboutPets{
-    order:2;
+    order:1;
     width: 300px;
     height: 408px;
     margin-left: 175px;
@@ -24,7 +24,7 @@
     overflow: hidden;
 }
 .about_container_content{
-    order: 1;
+    order: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -106,12 +106,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1200px;
+    width: 1199px;
+    height: 435px;
+}
+.slider_window{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+.pets_container_slider_item1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     height: 435px;
 }
 .slider_card{
-    margin-left: 10px;
-    margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -123,13 +134,48 @@
     &:hover{
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04)
     }
-    
+   
 }
-.card1{
-    margin-right: 45px;
+.card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9{
+    position: relative;
+    left: -1000px;
 }
-.card3{
-    margin-left: 45px;
+.card1,.card4,.card7{
+    margin-left:30px ;
+    margin-right: 90px;
+}
+.card3,.card6,.card9{
+    margin-left:85px ;
+}
+.card1,.card2,.card3,.card7,.card8,.card9{
+   opacity: 0;
+   pointer-events: none;
+}
+.moveNext{
+    opacity: 1;
+    animation: 'next';
+    animation-duration: 1s;
+}
+.movePrev{
+    opacity: 1;
+    animation: 'prev';
+    animation-duration: 1s
+}
+@keyframes next{
+    from{
+        left: -1000px; 
+    }
+    to{
+        left: 0px;
+    }
+}
+@keyframes prev{
+    from{
+        left: -1000px; 
+    }
+    to{
+        left: -2000px;
+    }
 }
 .slider_card_image{
     width: 270px;
@@ -137,7 +183,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    border-radius: 9px 9px 0px 0px
+    border-radius: 9px 9px 0px 0px;
+    img{
+        width: 270px;
+        height: auto;
+    }
+    
 }
 .slider_card_text{
     width: 74px;
@@ -207,9 +258,13 @@
         height: 868px;
     }
     .about_container_aboutPets{
+        order: 2;
         width: 300px;
         height: 408px;
         margin-left: 0px;
+    }
+    .about_container_content{
+        order: 1;
     }
     .pets{
         width: 100%;
@@ -218,19 +273,62 @@
     .pets_container{
         width: 99%;
         height: 697px;
-
+    }
+   /*----Slider -------------*/
+    .slider_window{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        overflow: hidden;
     }
     .pets_container_slider{
         height: 435px;
-        width: 92%;
-        .card1{
-            margin-right: 0px;
+        width: 708px;
+    }
+    .pets_container_slider_item1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 435px;
+    }
+
+    .card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9{
+        position: relative;
+        left: -1000px;
+    }
+    .card1,.card7{
+        margin-left:30px ;
+        margin-right: 90px;
+    }
+    
+    .card9,.card3,.card6{
+        opacity: 0;
+    }
+    .card4{
+        margin-right: 40px;
+        margin-left: 5px;
+    }
+    @keyframes next{
+        from{
+            left: -1000px; 
         }
-        .card3{
-            display: none;
+        to{
+            left: -60px;
         }
     }
+    @keyframes prev{
+        from{
+            left: -1000px; 
+        }
+        to{
+            left: -1950px;
+        }
+    }
+    
 }
+/* -------------Media END------------------------------*/
+
 
 @media (max-width: 767px) {
     .about{
@@ -286,10 +384,6 @@
             line-height: 160%;
         }
     }
-
-
-
-
     .about_container_aboutPets{
         margin-top: 40px;
         width: 260px;
@@ -327,30 +421,71 @@
         height: 507px;
         width: 270px;
         flex-wrap: wrap;
-        .card1{
-            order: 1;
-            align-self: center;
-            justify-self: center;
-            margin-right: 0px;
-            width: 270px;
-            height: 435px;
-            margin: -20px 0;
-        }
+        
         .slider_button1{
+            position: relative;
+            top:-35px;
             margin-left: 42px;
-            margin-bottom: -42px;
+            margin-bottom: 0px;
             order: 2;
         }
         .slider_button2{
+            top:-35px;
+            position: relative;
             margin-right: 42px;
-            margin-bottom: -42px;
+            margin-bottom: 0px;
             order: 3;
         }
-        .card2{
-            display: none;
+        
+    }
+/*  ----------Slider-------------------------------*/
+    .slider_window{
+        display: flex;
+        width: 90%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .pets_container_slider_item1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 435px;
+    }
+    .card1,.card2,.card3,.card4,.card5,.card6,.card7,.card8,.card9{
+        position: relative;
+        left: -1000px;
+    }
+    .card1{
+        order: 1;
+        align-self: center;
+        justify-self: center;
+        margin-left:30px ;
+        margin-right: 90px;
+        width: 270px;
+        height: 435px;
+    }
+    .card1,.card3,.card6,.card9,.card7{
+        opacity: 0;
+    }
+    .card2,.card5,.card7{
+        margin-right: 50px;
+        margin-left: 5px;
+    }
+    @keyframes next{
+        from{
+            left: -1000px; 
         }
-        .card3{
-            display: none;
+        to{
+            left: -0px;
+        }
+    }
+    @keyframes prev{
+        from{
+            left: -1000px; 
+        }
+        to{
+            left: -2000px;
         }
     }
 }
