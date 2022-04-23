@@ -166,15 +166,19 @@ paginationPetsjson=`[
       }
   ]`
 paginationPetsObj= JSON.parse(paginationPetsjson);
-//alert(paginationPetsObj) 
-//alert(document.documentElement.clientWidth); 
+ 
 
 let petsContainer={
     container:document.querySelector('.pets_slider'),
     pageNumber:document.querySelector('.pets_container_pageNavigator_pageNumber'),
+    btnNext:document.querySelector('.nexPage'),
+    btnLast:document.querySelector('.lastPage'),
+    btnPrev:document.querySelector('.prevPage'),
+    btnFirst:document.querySelector('.firstPage'),
     pageCount:1,
     petsCountOnPage:2,
     curentPage:1,
+    pets:[{}],
     currentPagePets:[{}],
 
     clear(){
@@ -200,8 +204,11 @@ let petsContainer={
         this.clear()
         this.curentPage=page;
         this.currentPagePets=[{}];
+        let counter = page*this.petsCountOnPage<arr.length?page*this.petsCountOnPage:arr.length;
+
+
         this.pageNumber.innerHTML=`<pre>${page}<pre>`;
-        for(let i=(page-1)*this.petsCountOnPage;i<page*this.petsCountOnPage;i++){
+        for(let i=(page-1)*this.petsCountOnPage;i<counter;i++){
             this.currentPagePets.push(arr[i])
             this.insert(`
            <div class="pets_slider_card card"${i}>
@@ -216,14 +223,69 @@ let petsContainer={
         let len=arr.length;
         this.setPageCount(arr)
         this.insertElementsOnPage(arr,1)
+        this.btnNext.addEventListener("click",()=>petsContainer.nextPage(paginationPetsObj)); 
+        this.btnLast.addEventListener("click",()=>petsContainer.lastPage(paginationPetsObj));
+        this.btnPrev.addEventListener("click",()=>petsContainer.prevPage(paginationPetsObj)); 
+        this.btnFirst.addEventListener("click",()=>petsContainer.firstPage(paginationPetsObj));
+    },
+    nextPage(arr){
+        if(this.curentPage<this.pageCount){
+            this.curentPage++;
+            this.insertElementsOnPage(arr,this.curentPage);
+            this.btnPrev.classList.add('arrowEnabled');
+            this.btnPrev.classList.remove('disabled');
+            this.btnFirst.classList.add('arrowEnabled');
+            this.btnFirst.classList.remove('disabled');
+        }
+        if(this.pageCount==this.curentPage){
+            this.btnNext.classList.remove('arrowEnabled');
+            this.btnNext.classList.add('disabled');
+            this.btnLast.classList.remove('arrowEnabled');
+            this.btnLast.classList.add('disabled');
+        }
+    },
+    lastPage(arr){
+            this.curentPage=this.pageCount;
+            this.insertElementsOnPage(arr,this.curentPage);
+            this.btnNext.classList.remove('arrowEnabled');
+            this.btnNext.classList.add('disabled');
+            this.btnLast.classList.remove('arrowEnabled');
+            this.btnLast.classList.add('disabled');
+            this.btnFirst.classList.add('arrowEnabled');
+            this.btnFirst.classList.remove('disabled');
+            this.btnPrev.classList.add('arrowEnabled');
+            this.btnPrev.classList.remove('disabled');
+    },
+    prevPage(arr){
+        if(this.curentPage>1){
+            this.curentPage--;
+            this.insertElementsOnPage(arr,this.curentPage);
+            this.btnNext.classList.add('arrowEnabled');
+            this.btnNext.classList.remove('disabled');
+            this.btnLast.classList.add('arrowEnabled');
+            this.btnLast.classList.remove('disabled');
+        }
+        if(this.curentPage==1){
+            this.btnPrev.classList.remove('arrowEnabled');
+            this.btnPrev.classList.add('disabled');
+            this.btnFirst.classList.remove('arrowEnabled');
+            this.btnFirst.classList.add('disabled');
+        }
+    },
+    firstPage(arr){
+            this.curentPage=1;
+            this.insertElementsOnPage(arr,this.curentPage);
+            this.btnPrev.classList.remove('arrowEnabled');
+            this.btnPrev.classList.add('disabled');
+            this.btnFirst.classList.remove('arrowEnabled');
+            this.btnFirst.classList.add('disabled');
+            this.btnLast.classList.add('arrowEnabled');
+            this.btnLast.classList.remove('disabled');
+            this.btnNext.classList.add('arrowEnabled');
+            this.btnNext.classList.remove('disabled');
     }
+
 }   
 
-
-petsContainer.init(paginationPetsObj)
-//petsContainer.insertElementsOnPage(paginationPetsObj,2);
-
-
-//petsContainer.setPageCount(paginationPetsObj)
-//petsContainer.clear()
-//petsContainer.insert(elem)
+petsContainer.init(paginationPetsObj); // инициализация контейнера при загрузке страницы
+window.addEventListener('resize', function(event){petsContainer.setPageCount(paginationPetsObj)});// отслеживает изменение размера окна и подгоняет пагинацию

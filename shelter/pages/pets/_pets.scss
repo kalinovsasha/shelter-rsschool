@@ -127,6 +127,7 @@ background-color: $color-light-s;
 
 .disabled{
     @include arrow;
+    pointer-events: none;
     &:hover{
        /* background-color:$color-select; */
     }
