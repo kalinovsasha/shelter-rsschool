@@ -8,6 +8,11 @@
     display: none;
     border-top: 2px solid #000000;
     border-bottom:2px solid #000000;
+    .header_burger_center{
+        width: 30px;
+        height: 2px;
+        background-color: black;
+    }
 }
 .header_wrapper{
     position: fixed;
@@ -33,6 +38,8 @@ header{
 }
 
 .header_logo{
+    position: relative;
+    z-index: 5;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -92,7 +99,7 @@ header{
     }
 }
 @media (max-width: 767px) {
-    
+    /*
     .header_nav{
         display: none;
     }
@@ -112,5 +119,80 @@ header{
             height: 2px;
             background-color: #000000;
         }
+    }  */
+    .header_nav{
+        position: fixed;
+        pointer-events: none;
+        opacity: 0;
+        margin: 0 0;
+        padding: 0 0;
+        top:0;
+        width: 320px;
+        height: 823px;
+        background-color: $color-light-xl;
+        left: calc(100vw + 100px);
+        z-index: 3;
+        transition: .3s ease-in;
+        display: flex;
+        ul{
+            margin:0 0 0 0;
+            margin-left: 30px;
+            width: 248px;
+            height: 327px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                padding: 0 0;
+                margin: 0 0;
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 160%;
+            }
+        }
     }
+    .header_nav_visible{
+        opacity:1 !important;
+        left: calc(100vw - 321px) !important;
+        pointer-events: all !important;
+        transition: .3s ease-in;
+        
+    }
+    .menuBlackout{
+        display: none;
+        margin: 0 0;
+        padding: 0 0;
+        top:0;
+        position: fixed;
+        background-color: rgba(41, 41, 41, 0.6);
+        width: 100vw;
+        height: 4684px;
+        z-index: 2;
+    }
+    .header_burger{
+        position: relative;
+        z-index: 4;
+        width: 30px;
+        height: 19px;
+        margin-right: 55px;
+        align-self: center;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        transition: 0.25s ease-out;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .burger_rotate{
+        transform: rotateZ(90deg);
+        transition: 0.25s ease-out;
+    }
+
+
+
 }

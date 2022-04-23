@@ -130,13 +130,10 @@ let burgerMenu={
         this.blackout.style.display='block';
         this.blackout.addEventListener('click', ()=>burgerMenu.closeBurger())
         this.li.forEach(el=>el.addEventListener('click', ()=>burgerMenu.closeBurger()))
+        document.querySelector('.main').style.position="fixed";
+        document.querySelector('.main').style.ocerflow="hidden";
         } else {
-            this.open=false;
-            this.blackout.style.display='none';
-            this.nav.classList.remove('header_nav_visible')
-            this.burger.classList.remove('burger_rotate');
-            this.blackout.removeEventListener('click', ()=>this.closeBurger());
-            this.li.forEach(el=>el.removeEventListener('click', ()=>burgerMenu.closeBurger()))
+            this.closeBurger();
         }
     },
     closeBurger(){
@@ -146,6 +143,8 @@ let burgerMenu={
         this.burger.classList.remove('burger_rotate');
         this.blackout.removeEventListener('click', ()=>this.closeBurger());
         this.li.forEach(el=>el.removeEventListener('click', ()=>burgerMenu.closeBurger()))
+        document.querySelector('.main').style.position="static";
+        document.querySelector('.main').style.ocerflow="visible";
     }
 
 }
