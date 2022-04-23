@@ -76,6 +76,7 @@ background-color: $color-light-s;
     display: flex;
     flex-direction: column;
     
+    
 }
 .pets_slider{
     width: 100%;
@@ -128,9 +129,7 @@ background-color: $color-light-s;
 .disabled{
     @include arrow;
     pointer-events: none;
-    &:hover{
-       /* background-color:$color-select; */
-    }
+    transition: 0.3s ease
 }
 .arrowEnabled{
     @include arrow;
@@ -190,6 +189,7 @@ background-color: $color-light-s;
     .pets_slider{
         height: 1365px;
         justify-content: center;
+        
     }
     .pets_slider_card{
         width: 99%;
@@ -207,5 +207,16 @@ background-color: $color-light-s;
     }
   }
  
-
-
+.next{
+    animation: 'anim';
+    animation-duration: 1s;
+}
+@keyframes anim {
+   0%{  
+    opacity: 0;
+   }
+   100% {
+    opacity: 1;
+    
+   }
+}

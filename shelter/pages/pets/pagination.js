@@ -87,17 +87,6 @@ paginationPetsjson=`[
       "diseases": ["deafness", "blindness"],
       "parasites": ["lice", "fleas"]
     },
-    {
-        "name": "Jennifer",
-        "img": "../../assets/images/pets-jennifer.png",
-        "type": "Dog",
-        "breed": "Labrador",
-        "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
-        "age": "2 months",
-        "inoculations": ["none"],
-        "diseases": ["none"],
-        "parasites": ["none"]
-      },
       {
         "name": "Sophia",
         "img": "../../assets/images/pets-sophia.png",
@@ -106,6 +95,17 @@ paginationPetsjson=`[
         "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
         "age": "1 month",
         "inoculations": ["parvovirus"],
+        "diseases": ["none"],
+        "parasites": ["none"]
+      },
+      {
+        "name": "Jennifer",
+        "img": "../../assets/images/pets-jennifer.png",
+        "type": "Dog",
+        "breed": "Labrador",
+        "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
+        "age": "2 months",
+        "inoculations": ["none"],
         "diseases": ["none"],
         "parasites": ["none"]
       },
@@ -201,22 +201,34 @@ let petsContainer={
         };
     },
     insertElementsOnPage(arr,page){
-        this.clear()
+        this.clear();
         this.curentPage=page;
-        this.currentPagePets=[{}];
-        let counter = page*this.petsCountOnPage<arr.length?page*this.petsCountOnPage:arr.length;
-
-
+        this.currentPagePets=[];
+        let cardCounter=0; // Для стилей кнопки, чтобы потом работать с модальными окнами
+        let counter = page*this.petsCountOnPage<arr.length?page*this.petsCountOnPage:arr.length; // Проходов цикла столько, сколько элементов в случае, если элементов меньше, чем влазит на страницу
         this.pageNumber.innerHTML=`<pre>${page}<pre>`;
+        //Удаление ивент листенера
+        for(let i=0;i<9;i++){
+            if(document.querySelector(`.card${i}`)!=null){
+                document.querySelector(`.card${i}`).addEventListener('click',()=>modalWindow.openModal(this.currentPagePets[i]));
+            }
+        }
+        ////Отрисовка карточек
         for(let i=(page-1)*this.petsCountOnPage;i<counter;i++){
             this.currentPagePets.push(arr[i])
             this.insert(`
-           <div class="pets_slider_card card"${i}>
+           <div class="pets_slider_card card${cardCounter} next">
                 <img src="${arr[i].img}" alt="pet" width="270" height="270">
                 <div class="pets_slider_card_text"> ${arr[i].name}</div>
                 <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
             </div>
            `)
+           cardCounter++;   
+        }
+        for(let i=0;i<9;i++){
+            if(document.querySelector(`.card${i}`)!=null){
+                document.querySelector(`.card${i}`).addEventListener('click',()=>modalWindow.openModal(this.currentPagePets[i]));
+            }
         }
     },
     init(arr=[]){ //Получает массив объектов (питомцев)
