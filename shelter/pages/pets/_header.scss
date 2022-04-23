@@ -26,7 +26,10 @@ header{
     height: 120px;
     display: flex;
     align-items: center;
-     background-color: $color-light-xl; 
+    background-color: $color-light-xl; 
+}
+.menuBlackout{
+    display: none;
 }
 .header_container{
     margin: 0 auto;
@@ -71,6 +74,7 @@ header{
 
 
 .header_nav{
+    justify-self: flex-end;
     width: 444px;
     height: 20px;
     @include flex-row-space-between;

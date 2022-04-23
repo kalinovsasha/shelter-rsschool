@@ -30,6 +30,10 @@ header {
   background-color: white;
 }
 
+.menuBlackout {
+  display: none;
+}
+
 .header_container {
   margin: 0 auto;
   width: 94%;
@@ -93,6 +97,7 @@ header {
 }
 
 .header_nav {
+  justify-self: flex-end;
   width: 444px;
   height: 20px;
   display: -webkit-box;
@@ -359,9 +364,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -503,6 +508,12 @@ button {
     height: 1603px;
   }
   .pets_slider {
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 580px;
     height: 1367px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;

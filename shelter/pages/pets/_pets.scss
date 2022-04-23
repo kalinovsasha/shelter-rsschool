@@ -83,7 +83,7 @@ background-color: $color-light-s;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 .pets_slider_card{
@@ -158,7 +158,9 @@ background-color: $color-light-s;
         height: 1603px;
     }
     .pets_slider{
-        
+        align-content: flex-start;
+        align-self: center;
+        width: 580px;
         height: 1367px;
         justify-content: center;
     }

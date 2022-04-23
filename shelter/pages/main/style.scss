@@ -247,6 +247,9 @@ header{
     }
 }
 @media (max-width: 767px) {
+    .main{
+        max-width: 100vw;
+    }
     .startScreen{
         width: 100%;
         height: 823px;
