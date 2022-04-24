@@ -151,18 +151,9 @@ modalWindow.modalWindowFade.addEventListener('click',(e)=>
         }
     })
 
+    modalWindow.modalWindowFade.addEventListener('mouseover',()=>modalWindow.closeBtn.style.backgroundColor="#FDDCC4")
+    modalWindow.modalWindowFade.addEventListener('mouseout',()=>modalWindow.closeBtn.style.backgroundColor="rgba(255, 255, 255, 0.00)")
+
 
 // Чтобы удалить скрол, нужно поставить атрибут overflow:hiden height:100vh для тега html
 
-/*/
-function xer(){
-for(let i=0;i<=6;i++){
-     setTimeout(()=>{
-        pet = JSON.parse(modalPets)[i];
-        modalWindow.setPet(pet)
-        if(i==6){xer()}
-        },i*1000)
-        
-}}
-xer()
-/*/

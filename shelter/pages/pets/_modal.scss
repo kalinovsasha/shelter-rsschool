@@ -12,9 +12,7 @@
     z-index: 4;
     
 }
-.modalWindowFade:hover .modalWindow_close{
-    background-color:#FDDCC4; ;
-}
+
 .wrapper{
     padding: 0 0;
     top:0px;
@@ -25,7 +23,6 @@
     height: 100vh;
     display: none;
     align-items: center;
-    
     
     
     
@@ -82,6 +79,7 @@
         /* h4 */
         text-align: left;
         padding: 0 0;
+        margin: 10px 0;
         font-family: 'Georgia';
         font-style: normal;
         font-weight: 400;
@@ -151,7 +149,7 @@
         border: 2px solid  #F1CDB3;
     }
     .modalWindow_close:hover{
-        background-color:#FDDCC4; ;
+        background-color:#FDDCC4 !important;
     }
 }
 
@@ -311,9 +309,13 @@
                 text-align: center;
             }
             h5{
+                margin-top: 10px;
                 margin-left: 10px;
                 text-align: justify;
-                width: 220px;
+                width: 222px;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 110%;
                 letter-spacing: 0.06em;
             }
             .modalWindow_text_text{

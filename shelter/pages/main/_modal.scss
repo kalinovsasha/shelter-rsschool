@@ -12,9 +12,7 @@
     z-index: 4;
     
 }
-.modalWindowFade:hover .modalWindow_close{
-    background-color:#FDDCC4; ;
-}
+
 .wrapper{
     padding: 0 0;
     top:0px;
@@ -151,7 +149,7 @@
         border: 2px solid  #F1CDB3;
     }
     .modalWindow_close:hover{
-        background-color:#FDDCC4; ;
+        background-color:#FDDCC4 !important; 
     }
 }
 
@@ -265,7 +263,7 @@
             border: 2px solid  #F1CDB3;
         }
         .modalWindow_close:hover{
-            background-color:#FDDCC4; ;
+            background-color:#FDDCC4; 
         }
     }}
 
