@@ -541,6 +541,7 @@ button {
     height: 1565px;
   }
   .pets_slider {
+    width: 270px;
     height: 1365px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;

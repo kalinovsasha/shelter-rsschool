@@ -266,7 +266,7 @@ let petsContainer={
 ////////////////////////////////////////////////////////////////
 let myPets=petsCreator.generator(paginationPetsObj); ///Генерим петов
 petsContainer.init(myPets); // инициализация контейнера при загрузке страницы
-window.addEventListener('resize', function(event){petsContainer.setPageCount(paginationPetsObj)});// отслеживает изменение размера окна и подгоняет пагинацию
+window.addEventListener('resize', function(event){petsContainer.setPageCount(myPets)});// отслеживает изменение размера окна и подгоняет пагинацию
 
 
 //petsContainer.init(paginationPetsObj); // инициализация контейнера при загрузке страницы
