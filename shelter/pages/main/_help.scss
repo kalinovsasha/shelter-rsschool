@@ -195,3 +195,80 @@
         text-align: center;
     }
 }
+
+@media (max-width:1280px){
+    .help{
+        width: 100%;
+        height: 779px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .help_content{
+        height: 599px;
+        width: 82%;
+        h2{
+            margin-top: 0px;
+        }
+    }
+    .help_list{
+        align-self: center;
+        margin-top: 40px;
+        width: 110%;
+        height: 450px;
+    }
+    .help_list_item1, .help_list_item2, .help_list_item3, .help_list_item4,.help_list_item5,.help_list_item6, .help_list_item7, .help_list_item8, .help_list_item9{
+        margin: 0 2px;
+        width: 32%;
+    }
+}
+
+@media (max-width:767px){
+    .help{
+        width: 100%;
+        height: 745px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .help_content{
+        height: 599px;
+        width: 82%;
+        h2{
+            position: relative;
+            top: -15px;
+            width: 270px;
+            height: 64px;
+            align-self:center;
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 130%;
+            margin-top: 0px;
+        }
+    }
+    .help_list{
+        align-self: center;
+        justify-content: space-between;
+        margin-top: 0px;
+        width: 100%;
+        height: 555px;
+    }
+    .help_list_item1, .help_list_item2, .help_list_item3, .help_list_item4,.help_list_item5,.help_list_item6, .help_list_item7, .help_list_item8, .help_list_item9{
+        width: 42%;
+        overflow:visible;
+        h4{
+            font-family: 'Georgia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 110%;
+        }
+        img{
+            width: 50px;
+        }
+    }
+
+
+}

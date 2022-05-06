@@ -9,24 +9,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header_container">
-            <a class="header_logo_href" href="#">
-                <div class="header_logo">
-                    <h1 class="header_h1">Cozy House</h1>
-                    <div class="header_logo_text">Shelter for pets in Boston</div>
+    <div class="header_wrapper">
+        <header>
+            <div class="header_container">
+                <a class="header_logo_href" href="../../pages/main/index.html">
+                    <div class="header_logo">
+                        <h1 class="header_h1">Cozy House</h1>
+                        <div class="header_logo_text">Shelter for pets in Boston</div>
+                    </div>
+                </a>
+                <nav class="header_nav">
+                    <ul>
+                        <li><a href="../../pages/main/index.html">About the shelter</a> </li> 
+                        <li class="nav_active"> <a href="#">Our pets</a> </li>
+                        <li><a href="../main/index.html#helpShelter">Help the shelter</a> </li>
+                        <li><a href="#contacts">Contacts</a> </li>
+                    </ul>
+                </nav>
+                <div class="menuBlackout"></div>
+                <div class="header_burger">
+                    <div class="header_burger_center"></div>
                 </div>
-            </a>
-            <nav class="header_nav">
-                <ul>
-                    <li><a href="../../pages/main/index.html">About the shelter</a> </li> 
-                    <li class="nav_active"> <a href="#">Our pets</a> </li>
-                    <li><a href="../main/index.html#helpShelter">Help the shelter</a> </li>
-                    <li><a href="#contacts">Contacts</a> </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+            </div>
+        </header>
+    </div>
+   
 
     <section class="pets">
         <div class="pets_container">
@@ -35,52 +42,52 @@
                 <div class="pets_container_wraper">
                     <div class="pets_slider">
                         <div class="pets_slider_card">
-                                <img src="../../assets/images/pets-katrine.png" alt="katrine" width="270px" height="270px">
+                                <img src="../../assets/images/pets-katrine.png" alt="katrine" width="270" height="270">
                                 <div class="pets_slider_card_text"> Katrine</div>
                                 <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/pets-jennifer.png" alt="jennifer" width="270px" height="270px">
+                            <img src="../../assets/images/pets-jennifer.png" alt="jennifer" width="270" height="270">
                             <div class="pets_slider_card_text"> Jennifer</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/pets-woody.png" alt="woody" width="270px" height="270px">
+                            <img src="../../assets/images/pets-woody.png" alt="woody" width="270" height="270">
                             <div class="pets_slider_card_text"> Woody</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/pets-sophia.png" alt="sophia" width="270px" height="270px">
+                            <img src="../../assets/images/pets-sophia.png" alt="sophia" width="270" height="270">
                             <div class="pets_slider_card_text"> Sophia</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/pets-timmy.png" alt="timmy" width="270px" height="270px">
+                            <img src="../../assets/images/pets-timmy.png" alt="timmy" width="270" height="270">
                             <div class="pets_slider_card_text"> Timmy</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/Charly.png" alt="Charly" width="270px" height="270px">
+                            <img src="../../assets/images/Charly.png" alt="Charly" width="270" height="270">
                             <div class="pets_slider_card_text"> Charly</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/pets-scarlet.png" alt="scarlet" width="270px" height="270px">
+                            <img src="../../assets/images/pets-scarlet.png" alt="scarlet" width="270" height="270">
                             <div class="pets_slider_card_text"> Scarlet</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                         <div class="pets_slider_card">
-                            <img src="../../assets/images/pets-freddy.png" alt="freddy" width="270px" height="270px">
+                            <img src="../../assets/images/pets-freddy.png" alt="freddy" width="270" height="270">
                             <div class="pets_slider_card_text"> Freddie</div>
                             <button class="pets_slider_card_button"><div class="pets_slider_card_button_text">Learn more</div></button>
                         </div>
                     </div>
-                    <div class="pets_container_pageNavigator">
-                        <div class="disabled pets_container_pageNavigator_arrowl1"><pre> << </pre></div>
-                        <div class="disabled pets_container_pageNavigator_arrowl2"><pre> < </pre> </div>
+                    <div class="pets_container_pageNavigator ">
+                        <div class="disabled pets_container_pageNavigator_arrow firstPage"><pre> &lt&lt </pre></div>
+                        <div class="disabled pets_container_pageNavigator_arrow prevPage"><pre> &lt </pre> </div>
                         <div class="pets_container_pageNavigator_pageNumber"> <pre>1</pre></div>
-                        <div class="arrowEnabled pets_container_pageNavigator_arrowr1"><pre>></pre></div>
-                        <div class="arrowEnabled pets_container_pageNavigator_arrowr2"><pre>>></pre></div>
+                        <div class="arrowEnabled pets_container_pageNavigator_arrow nexPage"><pre>></pre></div>
+                        <div class="arrowEnabled pets_container_pageNavigator_arrow lastPage"><pre>>></pre></div>
                     </div>
                 </div>
                 
@@ -115,7 +122,38 @@
                 <div class="footer_puppy"></div>
             </div>
         </footer>
+
+        <!-------------------Modal---------------------------->>
+    <div class="wrapper">
+        <div class="modal_wrapper">
+            <div class="modalWindow_close">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42618 6.00003L11.7046 1.72158C12.0985 1.32775 12.0985 0.689213 11.7046 0.295433C11.3108 -0.0984027 10.6723 -0.0984027 10.2785 0.295433L5.99998 4.57394L1.72148 0.295377C1.32765 -0.098459 0.68917 -0.098459 0.295334 0.295377C-0.0984448 0.689213 -0.0984448 1.32775 0.295334 1.72153L4.57383 5.99997L0.295334 10.2785C-0.0984448 10.6723 -0.0984448 11.3108 0.295334 11.7046C0.68917 12.0985 1.32765 12.0985 1.72148 11.7046L5.99998 7.42612L10.2785 11.7046C10.6723 12.0985 11.3108 12.0985 11.7046 11.7046C12.0985 11.3108 12.0985 10.6723 11.7046 10.2785L7.42618 6.00003Z" fill="#292929"/>
+                </svg>
+            </div>
+            <div class="modalWindow">
+                <img id="modalWindow_img" class="modalWindow_img" src="../../assets/images/pets-scarlet.png" alt="" >
+                <div class="modalWindow_text">
+                    <h3 id="petName">Scarlet</h3>
+                    <h4 id="petType">Dog - Labrador</h4>
+                    <h5 id="petDescription">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</h5>
+                    <div class="modalWindow_text_text">
+                        <ul>
+                            <li id="petAge"><b>Age:</b> 2 months</li>
+                            <li id="Inoculations"><b>Inoculations:</b> none</li>
+                            <li id="Diseases"><b>Diseases:</b> none</li>
+                            <li id="Parasites"><b>Parasites:</b> none</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modalWindowFade"></div>
 </body>
+<script src="./script.js"></script>
+<script src="./pagination.js"></script>
+<script src="./modal.js"></script>
 </html>
 
 
